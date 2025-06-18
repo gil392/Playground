@@ -32,8 +32,8 @@ echo -e "\n🧪 Found ${#TEST_NAMES[@]} tests:"
 printf '  • %s\n' "${TEST_NAMES[@]}"
 
 # Prepare output files
-DETAILED_FILE="bisect_all_tests_detailed_log.txt"
-SUMMARY_FILE="bisect_all_tests_summary.txt"
+DETAILED_FILE="./dist/bisect/bisect_all_tests_detailed_log.txt"
+SUMMARY_FILE="./dist/bisect/bisect_all_tests_summary.txt"
 > "$DETAILED_FILE"
 > "$SUMMARY_FILE"
 
