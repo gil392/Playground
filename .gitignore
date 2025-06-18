@@ -1,0 +1,19 @@
+# Node
+node_modules/
+dist/
+.env
+.env.*
+
+# TypeScript
+*.tsbuildinfo
+
+# React
+build/
+
+# Logs
+*.log
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
