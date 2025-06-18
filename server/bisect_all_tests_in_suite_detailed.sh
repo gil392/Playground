@@ -56,7 +56,7 @@ for test_name in "${FAILED_TEST_NAMES[@]}"; do
 echo "Running test: $test_name"
 npx jest --detectOpenHandles --forceExit --runInBand "$SUITE_FILE" -t "$test_name"
 node -e '
-  const data = require("./jest-bisect-result.json");
+  const data = require("/tmp/jest-bisect-result.json");
   const results = data.testResults.flatMap(tr => tr.assertionResults);
   const failed = results.find(t => t.title === "$test_name" && t.status === "failed");
   process.exit(failed ? 1 : 0);
