@@ -22,14 +22,13 @@ app.get("/divide", ((req: Request, res: Response) => {
   const a = Number(req.query.a);
   const b = Number(req.query.b);
 
-  if (isNaN(a) || isNaN(b)) {
+  if (isNaN(a) || isNaN(b)) { //
     return res.status(400).send("Invalid numbers");
-  } // empty commit
-
-  if (b === 0) {
-    // empty commit
-    return res.status(400).send("Division by zero");
   }
+
+  // if (b === 0) {
+  //   return res.status(400).send("Division by zero");
+  // }
 
   res.send({ result: a * b });
 }) as RequestHandler);
