@@ -12,24 +12,31 @@ if [[ -z "$BAD_COMMIT" || -z "$GOOD_COMMIT" || -z "$SUITE_FILE" ]]; then
   exit 1
 fi
 
-# Step 1: Extract all test names using Node.js
-echo "🔍 Extracting test names from: $SUITE_FILE"
+echo "🔍 Running full suite once to detect failing tests..."
+npm run test -- "$SUITE_FILE" --json --outputFile=jest-results.json > /dev/null
 
-readarray -t TEST_NAMES < <(node -e "
-  const fs = require('fs');
-  const file = fs.readFileSync('$SUITE_FILE', 'utf-8');
-  const regex = /(test|it)\(\s*['\"\`](.*?)['\"\`]/g;
-  const matches = [...file.matchAll(regex)];
-  for (const match of matches) console.log(match[2]);
-")
-
-if [[ ${#TEST_NAMES[@]} -eq 0 ]]; then
-  echo "❌ No tests found in file."
+if [[ ! -f jest-results.json ]]; then
+  echo "❌ Failed to produce test results"
   exit 1
 fi
 
-echo -e "\n🧪 Found ${#TEST_NAMES[@]} tests:"
-printf '  • %s\n' "${TEST_NAMES[@]}"
+readarray -t FAILED_TEST_NAMES < <(node -e '
+  const data = require("./jest-results.json");
+  const failed = data.testResults.flatMap(tr =>
+    tr.assertionResults
+      .filter(ar => ar.status === "failed")
+      .map(ar => ar.title)
+  );
+  for (const name of failed) console.log(name);
+')
+
+if [[ ${#FAILED_TEST_NAMES[@]} -eq 0 ]]; then
+  echo "✅ No failing tests in current commit."
+  exit 0
+fi
+
+echo -e "\n❌ Found ${#FAILED_TEST_NAMES[@]} failing tests:"
+printf '  • %s\n' "${FAILED_TEST_NAMES[@]}"
 
 # Prepare output files
 DETAILED_FILE="./dist/bisect/bisect_all_tests_detailed_log.txt"
@@ -38,7 +45,7 @@ SUMMARY_FILE="./dist/bisect/bisect_all_tests_summary.txt"
 > "$SUMMARY_FILE"
 
 # Step 2: Run bisect for each test
-for test_name in "${TEST_NAMES[@]}"; do
+for test_name in "${FAILED_TEST_NAMES[@]}"; do
   echo -e "\n🔍 Starting bisect for: \"$test_name\""
   git bisect start "$BAD_COMMIT" "$GOOD_COMMIT"
 
