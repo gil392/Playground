@@ -4,7 +4,7 @@ const app = express();
 const port = 3001;
 
 app.get("/ping", (req: Request, res: Response) => {
-  res.send("pong");
+  res.send("ping");
 });
 
 app.get("/add", ((req: Request, res: Response) => {
