@@ -60,11 +60,15 @@ EOF
 
   chmod +x "$RUNNER_SCRIPT"
 
-  echo -e "\n🧪 START: $test_name\n" >> "$DETAILED_FILE"
-  git bisect run "$RUNNER_SCRIPT" >> "$DETAILED_FILE" 2>&1
+TEMP_LOG="./dist/bisect/bisect_${test_name// /_}_log.txt"
+> "$TEMP_LOG"
+
+echo -e "\n🧪 START: $test_name\n" >> "$TEMP_LOG"
+git bisect run "$RUNNER_SCRIPT" >> "$TEMP_LOG" 2>&1
+cat "$TEMP_LOG" >> "$DETAILED_FILE"
 
   # Find the first bad commit from the bisect output
-  BISECT_RESULT=$(grep 'is the first bad commit' "$DETAILED_FILE" | tail -n1 | grep -oE '^[0-9a-f]{7,40}')
+  BISECT_RESULT=$(grep 'is the first bad commit' "$TEMP_LOG" | tail -n1 | grep -oE '^[0-9a-f]{7,40}')
     TEST_LINE="[$test_name] failed first in commit $BISECT_RESULT"
 
   echo "$TEST_LINE" >> "$SUMMARY_FILE"
