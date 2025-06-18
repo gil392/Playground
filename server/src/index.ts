@@ -20,7 +20,7 @@ app.get("/add", ((req: Request, res: Response) => {
 
 app.get("/divide", ((req: Request, res: Response) => {
   const a = Number(req.query.a);
-  const b = Number(req.query.b);
+  const b = Number(req.query.b); //
 
   if (isNaN(a) || isNaN(b)) {
     return res.status(400).send("Invalid numbers");
