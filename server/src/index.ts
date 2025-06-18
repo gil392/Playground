@@ -24,7 +24,7 @@ app.get("/divide", ((req: Request, res: Response) => {
 
   if (isNaN(a) || isNaN(b)) {
     return res.status(400).send("Invalid numbers");
-  }
+  } // empty commit
 
   if (b === 0) {
     // empty commit
