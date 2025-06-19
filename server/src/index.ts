@@ -16,7 +16,7 @@ app.get("/add", ((req: Request, res: Response) => {
   if (isNaN(a) || isNaN(b)) {
     return res.status(400).send("Invalid numbers");
   }
-
+  console.log("Result add", a + b);
   res.send({ result: a + b });
 }) as RequestHandler);
 
