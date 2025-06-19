@@ -36,7 +36,7 @@ app.get("/divide", ((req: Request, res: Response) => {
 }) as RequestHandler);
 
 app.get("/multiply", ((req: Request, res: Response) => {
-  const a = Number(req.query.a);
+  const a = Number(req.query.a); //
   const b = Number(req.query.b); //
 
   if (isNaN(a) || isNaN(b)) {

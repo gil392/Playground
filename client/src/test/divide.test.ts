@@ -17,13 +17,15 @@ describe("Addition", function () {
   });
 
   it("should add two numbers correctly", async () => {
-   const inputA = await driver.findElement(By.css('[data-testid="input-a"]'));
+    const inputA = await driver.findElement(By.css('[data-testid="input-a"]'));
     const inputB = await driver.findElement(By.css('[data-testid="input-b"]'));
 
     await inputA.sendKeys("6");
-    await inputB.sendKeys("3");
+    await inputB.sendKeys("3"); //
 
-    const addButton = await driver.findElement(By.xpath("//button[text()='Divide']"));
+    const addButton = await driver.findElement(
+      By.xpath("//button[text()='Divide']")
+    );
     await addButton.click();
 
     const resultElem = await driver.wait(
