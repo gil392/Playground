@@ -41,6 +41,7 @@ function App() {
           <TextField
             label="Number A"
             type="number"
+            inputProps={{ "data-testid": "input-a" }}
             value={a}
             onChange={(e) => setA(e.target.value)}
             fullWidth
@@ -50,6 +51,7 @@ function App() {
             type="number"
             value={b}
             onChange={(e) => setB(e.target.value)}
+            inputProps={{ "data-testid": "input-b" }}
             fullWidth
           />
           <Stack direction="row" spacing={2} justifyContent="center">
