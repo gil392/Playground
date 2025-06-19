@@ -21,7 +21,7 @@ describe("Addition", function () {
     const inputB = await driver.findElement(By.css('[data-testid="input-b"]'));
 
     await inputA.sendKeys("6");
-    await inputB.sendKeys("3"); //
+    await inputB.sendKeys("3");
 
     const addButton = await driver.findElement(
       By.xpath("//button[text()='Divide']")
