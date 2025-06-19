@@ -59,7 +59,7 @@ function App() {
               Add
             </Button>
             <Button variant="contained" onClick={() => handleCalc("divide")}>
-              Multiply
+              Divide
             </Button>
           </Stack>
           {result && (
