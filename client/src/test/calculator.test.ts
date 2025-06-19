@@ -5,7 +5,7 @@ import * as chromedriver from "chromedriver";
 async function run() {
   console.log("🚀 Starting Selenium test...");
   const service = new ServiceBuilder(chromedriver.path);
-    const chromeOptions = new Options();
+  const chromeOptions = new Options();
   //chromeOptions.addArguments("--headless", "--no-sandbox", "--disable-gpu");
 
   console.log("🧱 Building driver...");
@@ -20,19 +20,15 @@ async function run() {
     await driver.get("http://localhost:5174"); // Vite dev server
 
     console.log("🔎 Locating input A...");
-    // works until here
     const inputA = await driver.findElement(By.css('[data-testid="input-a"]'));
     const inputB = await driver.findElement(By.css('[data-testid="input-b"]'));
-    console.log("Located inputs");
     const addButton = await driver.findElement(
       By.xpath("//button[text()='Add']")
     );
-    console.log("located add button");
 
     await inputA.sendKeys("4");
     await inputB.sendKeys("3");
     await addButton.click();
-    console.log("clicked on all");
 
     const resultElem = await driver.wait(
       until.elementLocated(By.css("h6.MuiTypography-root")),
@@ -41,6 +37,10 @@ async function run() {
 
     const text = await resultElem.getText();
     if (!text.includes("Result:")) throw new Error("No result found");
+    if (text !== "Result: 7") {
+      console.warn("❌ Test failed: result is supposed to be 7, instead " + text);
+      process.exit(1);
+    }
     console.log("✅ Test passed: " + text);
     process.exit(0);
   } catch (e) {
