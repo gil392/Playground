@@ -16,7 +16,7 @@ describe("Addition", function () {
     await driver.quit();
   });
 
-  it("should add two numbers correctly", async () => {
+  it("should divide two numbers correctly", async () => {
     const inputA = await driver.findElement(By.css('[data-testid="input-a"]'));
     const inputB = await driver.findElement(By.css('[data-testid="input-b"]'));
 
