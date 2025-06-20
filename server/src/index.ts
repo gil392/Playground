@@ -1,6 +1,8 @@
 import express, { Request, RequestHandler, Response } from "express";
+import cors from "cors";
 
 const app = express();
+app.use(cors({ credentials: true, origin: "http://localhost:5174" }));
 const port = 3001;
 
 app.get("/ping", (req: Request, res: Response) => {
@@ -14,8 +16,8 @@ app.get("/add", ((req: Request, res: Response) => {
   if (isNaN(a) || isNaN(b)) {
     return res.status(400).send("Invalid numbers");
   }
-
-  res.send({ result: a - b });
+  console.log("Result add", a + b);
+  res.send({ result: a + b });
 }) as RequestHandler);
 
 app.get("/divide", ((req: Request, res: Response) => {
@@ -26,9 +28,20 @@ app.get("/divide", ((req: Request, res: Response) => {
     return res.status(400).send("Invalid numbers");
   }
 
-  // if (b === 0) {
-  //   return res.status(400).send("Division by zero");
-  // }
+  if (b === 0) {
+    return res.status(400).send("Division by zero");
+  }
+
+  res.send({ result: a + b });
+}) as RequestHandler);
+
+app.get("/multiply", ((req: Request, res: Response) => {
+  const a = Number(req.query.a); //
+  const b = Number(req.query.b); //
+
+  if (isNaN(a) || isNaN(b)) {
+    return res.status(400).send("Invalid numbers");
+  }
 
   res.send({ result: a * b });
 }) as RequestHandler);
