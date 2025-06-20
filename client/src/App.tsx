@@ -27,6 +27,7 @@ function App() {
       });
       setResult(`Result: ${res.data.result}`);
     } catch (err: any) {
+      console.warn("Error handling calculation:", err);
       setError(err.response?.data || "Unknown error");
     }
   };

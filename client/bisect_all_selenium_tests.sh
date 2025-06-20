@@ -11,6 +11,11 @@ fi
 
 echo "🔍 Looking for Selenium test files in $TEST_DIR"
 TEST_FILES=($(find "$TEST_DIR" -name "*.test.ts"))
+# TEST_FILES=(
+#   src/test/add.test.ts
+#   src/test/calculator.test.ts
+#   # Add more test files here as needed
+# )
 
 if [[ ${#TEST_FILES[@]} -eq 0 ]]; then
   echo "❌ No test files found."
@@ -27,15 +32,17 @@ mkdir -p ./dist/bisect
 > "$SUMMARY_FILE"
 
 for test_file in "${TEST_FILES[@]}"; do
-  test_name=$(basename "$test_file")
-  echo -e "\n🔍 Starting bisect for: \"$test_name\""
+  echo -e "\n🔍 Starting bisect for: \"$test_file\""
   git bisect start "$BAD_COMMIT" "$GOOD_COMMIT"
 
   # Create runner script
   RUNNER_SCRIPT="/tmp/bisect_runner.sh"
   cat <<EOF > "$RUNNER_SCRIPT"
+  
 #!/bin/bash
-echo "▶️ Running test: $test_name"
+echo "▶️ Running test: $test_file"
+cd /c/Gil/Playground/Playground/client || exit 1
+
 npx ts-node "$test_file"
 EOF
 
