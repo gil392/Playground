@@ -1,9 +1,7 @@
 {
   "extends": "../../tsconfig.base.json",
-  "files": [],
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "../../libs/**/*.ts"],
   "exclude": ["**/*.spec.ts"],
-  "references": [],
   "compilerOptions": {
     "target": "es2016",
     "module": "commonjs" /* Specify what module code is generated. */,

@@ -1,8 +1,228 @@
 {
-  "nodes": {},
+  "nodes": {
+    "backend": {
+      "name": "backend",
+      "type": "app",
+      "data": {
+        "root": "bigProject/apps/backend",
+        "name": "backend",
+        "tags": [
+          "npm:public"
+        ],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "dev",
+              "start",
+              "test"
+            ]
+          },
+          "description": "",
+          "js": {
+            "packageName": "server",
+            "packageMain": "index.js",
+            "isInPackageManagerWorkspaces": false
+          }
+        },
+        "targets": {
+          "dev": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "dev"
+            },
+            "metadata": {
+              "scriptContent": "nodemon src/index.ts",
+              "runCommand": "npm run dev"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "start": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "start"
+            },
+            "metadata": {
+              "scriptContent": "ts-node src/index.ts",
+              "runCommand": "npm run start"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "test": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "metadata": {
+              "scriptContent": "jest",
+              "runCommand": "npm run test"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "nx-release-publish": {
+            "executor": "@nx/js:release-publish",
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "options": {},
+            "configurations": {},
+            "parallelism": true
+          },
+          "build": {
+            "executor": "@nx/esbuild:esbuild",
+            "outputs": [
+              "{options.outputPath}"
+            ],
+            "defaultConfiguration": "production",
+            "options": {
+              "platform": "node",
+              "outputPath": "dist/backend",
+              "format": [
+                "cjs"
+              ],
+              "bundle": false,
+              "main": "apps/backend/src/index.ts",
+              "tsConfig": "apps/backend/tsconfig.json",
+              "assets": [
+                "backend/src/assets"
+              ],
+              "generatePackageJson": true,
+              "esbuildOptions": {
+                "sourcemap": true,
+                "outExtension": {
+                  ".js": ".js"
+                }
+              }
+            },
+            "configurations": {
+              "development": {},
+              "production": {
+                "esbuildOptions": {
+                  "sourcemap": false,
+                  "outExtension": {
+                    ".js": ".js"
+                  }
+                }
+              }
+            },
+            "parallelism": true
+          },
+          "serve": {
+            "continuous": true,
+            "executor": "@nx/js:node",
+            "defaultConfiguration": "development",
+            "dependsOn": [
+              "build"
+            ],
+            "options": {
+              "buildTarget": "backend:build",
+              "runBuildTargetDependencies": false
+            },
+            "configurations": {
+              "development": {
+                "buildTarget": "backend:build:development"
+              },
+              "production": {
+                "buildTarget": "backend:build:production"
+              }
+            },
+            "parallelism": true
+          }
+        },
+        "$schema": "../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "apps/backend/src",
+        "projectType": "application",
+        "implicitDependencies": []
+      }
+    },
+    "client": {
+      "name": "client",
+      "type": "app",
+      "data": {
+        "root": "bigProject/apps/client",
+        "name": "client",
+        "tags": [
+          "npm:private"
+        ],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "dev",
+              "build",
+              "preview",
+              "test"
+            ]
+          },
+          "js": {
+            "packageName": "frontend-calculator",
+            "isInPackageManagerWorkspaces": false
+          }
+        },
+        "targets": {
+          "dev": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "dev"
+            },
+            "metadata": {
+              "scriptContent": "vite",
+              "runCommand": "npm run dev"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "build": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build"
+            },
+            "metadata": {
+              "scriptContent": "vite build",
+              "runCommand": "npm run build"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "preview": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "preview"
+            },
+            "metadata": {
+              "scriptContent": "vite preview",
+              "runCommand": "npm run preview"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "test": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "test"
+            },
+            "metadata": {
+              "scriptContent": "for %f in (src\\test\\*.test.ts) do npx ts-node %f",
+              "runCommand": "npm run test"
+            },
+            "configurations": {},
+            "parallelism": true
+          }
+        },
+        "$schema": "../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "client/src",
+        "projectType": "application",
+        "implicitDependencies": []
+      }
+    }
+  },
   "externalNodes": {},
-  "dependencies": {},
+  "dependencies": {
+    "backend": [],
+    "client": []
+  },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1750448266639
+  "computedAt": 1750455763175
 }
