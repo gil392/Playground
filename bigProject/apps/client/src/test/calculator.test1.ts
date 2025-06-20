@@ -1,6 +1,7 @@
 import { Builder, By, until } from "selenium-webdriver";
 import { Options, ServiceBuilder } from "selenium-webdriver/chrome";
 import * as chromedriver from "chromedriver";
+import { CLIENT_URL } from "../../../../../libs/Utils";
 
 async function run() {
   console.log("🚀 Starting Selenium test...");
@@ -17,7 +18,7 @@ async function run() {
 
   try {
     console.log("🌐 Opening calculator app...");
-    await driver.get("http://localhost:5174"); // Vite dev server
+    await driver.get(CLIENT_URL); // Vite dev server
 
     console.log("🔎 Locating input A...");
     const inputA = await driver.findElement(By.css('[data-testid="input-a"]'));

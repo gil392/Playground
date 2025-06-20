@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/gil392/Playground/issues"
   },
-  "homepage": "https://github.com/gil392/Playground#readme"
+  "homepage": "https://github.com/gil392/Playground#readme",
+  "devDependencies": {
+    "@nx/js": "^21.2.1",
+    "@nx/react": "^21.2.1",
+    "nx": "^21.2.1"
+  }
 }

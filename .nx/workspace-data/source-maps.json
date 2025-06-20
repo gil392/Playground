@@ -1,0 +1,486 @@
+{
+  "bigProject/apps/backend": {
+    "root": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:public": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.0": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.1": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.2": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.description": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.executor": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.options": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.options.script": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata.scriptContent": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata.runCommand": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.executor": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.options": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.metadata": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.options.script": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.metadata.scriptContent": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.start.metadata.runCommand": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.executor": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options.script": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata.scriptContent": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata.runCommand": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.executor": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.dependsOn": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.nx-release-publish.options": [
+      "bigProject/apps/backend/package.json",
+      "nx/core/package-json"
+    ],
+    "$schema": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.defaultConfiguration": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.platform": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.format": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.bundle": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.main": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.tsConfig": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.assets": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.generatePackageJson": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.esbuildOptions": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production.esbuildOptions": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.continuous": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.defaultConfiguration": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.dependsOn": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.buildTarget": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.runBuildTargetDependencies": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development.buildTarget": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production.buildTarget": [
+      "bigProject/apps/backend/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "bigProject/apps/client": {
+    "root": [
+      "bigProject/apps/client/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "bigProject/apps/client/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.0": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.1": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.2": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.3": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.executor": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.options": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.options.script": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata.scriptContent": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.dev.metadata.runCommand": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.executor": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.script": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.scriptContent": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.runCommand": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.preview": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.preview.executor": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.preview.options": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.preview.metadata": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.preview.options.script": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.preview.metadata.scriptContent": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.preview.metadata.runCommand": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.executor": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.options.script": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata.scriptContent": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.test.metadata.runCommand": [
+      "bigProject/apps/client/package.json",
+      "nx/core/package-json"
+    ],
+    "$schema": [
+      "bigProject/apps/client/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "bigProject/apps/client/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "bigProject/apps/client/project.json",
+      "nx/core/project-json"
+    ],
+    "// targets": [
+      "bigProject/apps/client/project.json",
+      "nx/core/project-json"
+    ]
+  }
+}
