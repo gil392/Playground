@@ -1,0 +1,191 @@
+{
+  "version": "6.0",
+  "nxVersion": "21.2.1",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".gitignore",
+        "hash": "5851971406209594708"
+      },
+      {
+        "file": "README.md",
+        "hash": "9556783886053551118"
+      },
+      {
+        "file": "bigProject/.gitignore",
+        "hash": "18435103667633526488"
+      },
+      {
+        "file": "bigProject/README.md",
+        "hash": "1926600178270285116"
+      },
+      {
+        "file": "bigProject/nx.json",
+        "hash": "10759076892175510211"
+      },
+      {
+        "file": "bigProject/package.json",
+        "hash": "15701847845796627214"
+      },
+      {
+        "file": "bigProject/packages/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "bigProject/tsconfig.base.json",
+        "hash": "7155844812122353375"
+      },
+      {
+        "file": "client/.gitignore",
+        "hash": "13046175384202504187"
+      },
+      {
+        "file": "client/README.md",
+        "hash": "13160460843517416105"
+      },
+      {
+        "file": "client/bisect_all_selenium_tests.sh",
+        "hash": "4674985078661259203"
+      },
+      {
+        "file": "client/eslint.config.js",
+        "hash": "16145672096969245511"
+      },
+      {
+        "file": "client/index.html",
+        "hash": "4025202329384162906"
+      },
+      {
+        "file": "client/package.json",
+        "hash": "15955754786668451339"
+      },
+      {
+        "file": "client/public/index.html",
+        "hash": "8965369762745104267"
+      },
+      {
+        "file": "client/public/vite.svg",
+        "hash": "16046085400642193116"
+      },
+      {
+        "file": "client/rel_bisect_all_selenium_tests.sh",
+        "hash": "5779565798754465090"
+      },
+      {
+        "file": "client/src/App.css",
+        "hash": "3739391659270974612"
+      },
+      {
+        "file": "client/src/App.tsx",
+        "hash": "16647702661078508024"
+      },
+      {
+        "file": "client/src/assets/react.svg",
+        "hash": "16069471864800376455"
+      },
+      {
+        "file": "client/src/index.css",
+        "hash": "13504153635654440336"
+      },
+      {
+        "file": "client/src/index.tsx",
+        "hash": "9096551551755522443"
+      },
+      {
+        "file": "client/src/main.tsx",
+        "hash": "11038211546439381838"
+      },
+      {
+        "file": "client/src/test/add.test.ts",
+        "hash": "8078156594931595855"
+      },
+      {
+        "file": "client/src/test/calculator.test.ts",
+        "hash": "2652268022178587474"
+      },
+      {
+        "file": "client/src/test/calculator.test1.ts",
+        "hash": "10317910531512007435"
+      },
+      {
+        "file": "client/src/test/divide.test.ts",
+        "hash": "12927860937230110942"
+      },
+      {
+        "file": "client/src/test/helpers/driver.ts",
+        "hash": "5523714346217311881"
+      },
+      {
+        "file": "client/src/vite-env.d.ts",
+        "hash": "12946363841406869089"
+      },
+      {
+        "file": "client/tsconfig.app.json",
+        "hash": "13666069508342255212"
+      },
+      {
+        "file": "client/tsconfig.json",
+        "hash": "2365188958523842680"
+      },
+      {
+        "file": "client/tsconfig.node.json",
+        "hash": "3588689360788834997"
+      },
+      {
+        "file": "client/vite.config.ts",
+        "hash": "16225914092815047172"
+      },
+      {
+        "file": "nxProject/.gitignore",
+        "hash": "18435103667633526488"
+      },
+      {
+        "file": "nxProject/README.md",
+        "hash": "2531785413940253030"
+      },
+      {
+        "file": "nxProject/nx.json",
+        "hash": "7984885312398650396"
+      },
+      {
+        "file": "nxProject/package.json",
+        "hash": "10101660289694609553"
+      },
+      {
+        "file": "nxProject/packages/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "package.json",
+        "hash": "4762590722552325611"
+      },
+      {
+        "file": "server/bisect_all_tests_in_suite_detailed.sh",
+        "hash": "17662869254971931448"
+      },
+      {
+        "file": "server/jest.config.js",
+        "hash": "10380841165838230238"
+      },
+      {
+        "file": "server/package.json",
+        "hash": "2570683415480044771"
+      },
+      {
+        "file": "server/src/index.test.ts",
+        "hash": "15619434003141444021"
+      },
+      {
+        "file": "server/src/index.ts",
+        "hash": "13634916142457287064"
+      },
+      {
+        "file": "server/tsconfig.json",
+        "hash": "12472094248766215035"
+      }
+    ]
+  }
+}

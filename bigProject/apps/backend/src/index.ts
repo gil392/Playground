@@ -2,7 +2,7 @@ import express, { Request, RequestHandler, Response } from "express";
 import cors from "cors";
 
 const app = express();
-app.use(cors({ credentials: true, origin: "http://localhost:5174" }));
+app.use(cors({ credentials: true, origin: "http://localhost:5180" }));
 const port = 3001;
 
 app.get("/ping", (req: Request, res: Response) => {
