@@ -52,7 +52,12 @@ EOF
   git bisect run "$RUNNER_SCRIPT" >> "$DETAILED_FILE" 2>&1
 
   BISECT_RESULT=$(grep 'is the first bad commit' "$DETAILED_FILE" | tail -n1 | grep -oE '^[0-9a-f]{7,40}')
-  echo "[$test_name] failed first in commit $BISECT_RESULT" >> "$SUMMARY_FILE"
+  if [[ -z "$BISECT_RESULT" ]]; then
+  echo "[$test_name] no bad commit found" >> "$SUMMARY_FILE"
+  else
+    COMMIT_MSG=$(git log -1 --pretty=%s "$BISECT_RESULT")
+    echo "[$test_name] failed first in commit $BISECT_RESULT: $COMMIT_MSG" >> "$SUMMARY_FILE"
+  fi
   echo "✅ Done: $test_name → $BISECT_RESULT"
 
   git bisect reset
