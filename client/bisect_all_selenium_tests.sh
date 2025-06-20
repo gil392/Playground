@@ -48,17 +48,17 @@ EOF
 
   chmod +x "$RUNNER_SCRIPT"
 
-  echo -e "\n🧪 START: $test_name\n" >> "$DETAILED_FILE"
+  echo -e "\n🧪 START: $test_file\n" >> "$DETAILED_FILE"
   git bisect run "$RUNNER_SCRIPT" >> "$DETAILED_FILE" 2>&1
 
   BISECT_RESULT=$(grep 'is the first bad commit' "$DETAILED_FILE" | tail -n1 | grep -oE '^[0-9a-f]{7,40}')
   if [[ -z "$BISECT_RESULT" ]]; then
-  echo "[$test_name] no bad commit found" >> "$SUMMARY_FILE"
+  echo "[$test_file] no bad commit found" >> "$SUMMARY_FILE"
   else
     COMMIT_MSG=$(git log -1 --pretty=%s "$BISECT_RESULT")
-    echo "[$test_name] failed first in commit $BISECT_RESULT: $COMMIT_MSG" >> "$SUMMARY_FILE"
+    echo "[$test_file] failed first in commit $BISECT_RESULT: $COMMIT_MSG" >> "$SUMMARY_FILE"
   fi
-  echo "✅ Done: $test_name → $BISECT_RESULT"
+  echo "✅ Done: $test_file → $BISECT_RESULT"
 
   git bisect reset
 done
