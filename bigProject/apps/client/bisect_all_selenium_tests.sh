@@ -41,7 +41,7 @@ for test_file in "${TEST_FILES[@]}"; do
   
 #!/bin/bash
 echo "▶️ Running test: $test_file"
-cd /c/Gil/Playground/Playground/client || exit 1
+cd /c/Gil/Playground/Playground/bigProject/apps/client || exit 1
 
 npx ts-node "$test_file"
 EOF
