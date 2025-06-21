@@ -1,4 +1,5 @@
 #!/bin/bash
+# e.g. ./bisect_all_selenium_tests.sh e56b6bbcf89d82cb8cbb414d70efb889afc8fe66 2041a3a1e35c898922e9c18ebb05f9b9cbdf94b5 src/test/tests
 BAD_COMMIT=$1
 GOOD_COMMIT=$2
 TEST_DIR=$3 # e.g. ./tests
@@ -45,6 +46,7 @@ EOF
 
   echo -e "\n🧪 START: $test_file\n" >> "$DETAILED_FILE"
   git bisect run "$RUNNER_SCRIPT" >> "$DETAILED_FILE" 2>&1
+
 
   BISECT_RESULT=$(grep 'is the first bad commit' "$DETAILED_FILE" | tail -n1 | grep -oE '^[0-9a-f]{7,40}')
   if [[ -z "$BISECT_RESULT" ]]; then
