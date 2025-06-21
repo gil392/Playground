@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# e.g. ./bisect_all_selenium_tests.sh e56b6bbcf89d82cb8cbb414d70efb889afc8fe66 2041a3a1e35c898922e9c18ebb05f9b9cbdf94b5 src/test/tests
 BAD_COMMIT=$1
 GOOD_COMMIT=$2
 TEST_DIR=$3 # e.g. ./tests
@@ -11,11 +11,6 @@ fi
 
 echo "🔍 Looking for Selenium test files in $TEST_DIR"
 TEST_FILES=($(find "$TEST_DIR" -name "*.test.ts"))
-# TEST_FILES=(
-#   src/test/add.test.ts
-#   src/test/calculator.test.ts
-#   # Add more test files here as needed
-# )
 
 if [[ ${#TEST_FILES[@]} -eq 0 ]]; then
   echo "❌ No test files found."
@@ -30,6 +25,7 @@ SUMMARY_FILE="./dist/bisect/selenium_bisect_summary.txt"
 mkdir -p ./dist/bisect
 > "$DETAILED_FILE"
 > "$SUMMARY_FILE"
+
 
 for test_file in "${TEST_FILES[@]}"; do
   echo -e "\n🔍 Starting bisect for: \"$test_file\""
@@ -51,6 +47,7 @@ EOF
   echo -e "\n🧪 START: $test_file\n" >> "$DETAILED_FILE"
   git bisect run "$RUNNER_SCRIPT" >> "$DETAILED_FILE" 2>&1
 
+
   BISECT_RESULT=$(grep 'is the first bad commit' "$DETAILED_FILE" | tail -n1 | grep -oE '^[0-9a-f]{7,40}')
   if [[ -z "$BISECT_RESULT" ]]; then
   echo "[$test_file] no bad commit found" >> "$SUMMARY_FILE"
@@ -59,6 +56,7 @@ EOF
     echo "[$test_file] failed first in commit $BISECT_RESULT: $COMMIT_MSG" >> "$SUMMARY_FILE"
   fi
   echo "✅ Done: $test_file → $BISECT_RESULT"
+  git bisect log >> "$DETAILED_FILE"
 
   git bisect reset
 done
