@@ -54,7 +54,7 @@ EOF
     echo "[$test_file] failed first in commit $BISECT_RESULT: $COMMIT_MSG" >> "$SUMMARY_FILE"
   fi
   echo "✅ Done: $test_file → $BISECT_RESULT"
-  #git bisect log >> "$DETAILED_FILE"
+  git bisect log >> "$DETAILED_FILE"
 
   git bisect reset
 done
