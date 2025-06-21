@@ -1,7 +1,7 @@
 import { Builder, By, until } from "selenium-webdriver";
 import { Options, ServiceBuilder } from "selenium-webdriver/chrome";
 import * as chromedriver from "chromedriver";
-import { CLIENT_URL } from "../../../../../libs/Utils";
+import { CLIENT_URL } from "../../../../libs/Utils";
 
 async function run() {
   console.log("🚀 Starting Selenium test...");
