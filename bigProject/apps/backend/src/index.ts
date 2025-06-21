@@ -30,6 +30,7 @@ app.get('/divide', ((req: Request, res: Response) => {
   }
 
   if (b === 0) {
+    //
     return res.status(400).send('Division by zero');
   }
 
