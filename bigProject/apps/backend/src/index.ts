@@ -33,7 +33,7 @@ app.get('/divide', ((req: Request, res: Response) => {
     return res.status(400).send('Division by zero');
   }
 
-  res.send({ result: a / b });
+  res.send({ result: a - b });
 }) as RequestHandler);
 
 app.get('/multiply', ((req: Request, res: Response) => {
