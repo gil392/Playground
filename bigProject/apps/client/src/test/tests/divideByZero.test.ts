@@ -28,14 +28,16 @@ async function run() {
     );
 
     const text = await resultElem.getText();
-    if (!text.includes('Result:')) throw new Error('No result found: ' + text);
-    //
-    // if (text !== 'Result: ') {
-    //   console.warn(
-    //     '❌ Test failed: result is supposed to be 2, instead ' + text
-    //   );
-    //   process.exit(1);
-    // }
+    if (!text.includes('Division by zero'))
+      throw new Error('No result found: ' + text);
+
+    if (text !== undefined) {
+      console.warn(
+        '❌ Test failed: result is supposed to be Division by zero, instead ' +
+          text
+      );
+      process.exit(1);
+    }
     console.log('✅ Test passed: ' + text);
     process.exit(0);
   } catch (e) {
