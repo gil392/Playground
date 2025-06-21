@@ -29,6 +29,7 @@ async function run() {
 
     const text = await resultElem.getText();
     if (!text.includes('Result:')) throw new Error('No result found: ' + text);
+    //
     // if (text !== 'Result: ') {
     //   console.warn(
     //     '❌ Test failed: result is supposed to be 2, instead ' + text
