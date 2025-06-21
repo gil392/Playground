@@ -31,7 +31,7 @@ async function run() {
     if (!text.includes('Division by zero'))
       throw new Error('No result found: ' + text);
 
-    if (text !== undefined) {
+    if (text !== 'Division by zero') {
       console.warn(
         '❌ Test failed: result is supposed to be Division by zero, instead ' +
           text
