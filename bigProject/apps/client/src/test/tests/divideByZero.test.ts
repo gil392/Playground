@@ -32,7 +32,6 @@ async function run() {
       throw new Error('No result found: ' + text);
 
     if (text !== 'Division by zero') {
-      //
       console.warn(
         '❌ Test failed: result is supposed to be Division by zero, instead ' +
           text
