@@ -7,8 +7,12 @@
     "projectFileMap": {
       "client": [
         {
+          "file": "bigProject/apps/client/bisect_all_selenium_tests.sh",
+          "hash": "11719875575425365471"
+        },
+        {
           "file": "bigProject/apps/client/index.html",
-          "hash": "5110164067079851422"
+          "hash": "13923808733953456283"
         },
         {
           "file": "bigProject/apps/client/package.json",
@@ -16,7 +20,7 @@
         },
         {
           "file": "bigProject/apps/client/project.json",
-          "hash": "9771385570729289302"
+          "hash": "13950583140491128021"
         },
         {
           "file": "bigProject/apps/client/public/favicon.ico",
@@ -32,7 +36,7 @@
         },
         {
           "file": "bigProject/apps/client/src/App.css",
-          "hash": "3739391659270974612"
+          "hash": "2229811984542628135"
         },
         {
           "file": "bigProject/apps/client/src/App.tsx",
@@ -44,7 +48,7 @@
         },
         {
           "file": "bigProject/apps/client/src/index.css",
-          "hash": "13504153635654440336"
+          "hash": "1364477521051823897"
         },
         {
           "file": "bigProject/apps/client/src/index.tsx",
@@ -52,7 +56,7 @@
         },
         {
           "file": "bigProject/apps/client/src/main.tsx",
-          "hash": "11038211546439381838"
+          "hash": "1718379431751548352"
         },
         {
           "file": "bigProject/apps/client/src/test/add.test.ts",
@@ -60,7 +64,7 @@
         },
         {
           "file": "bigProject/apps/client/src/test/calculator.test.ts",
-          "hash": "5127355421371796357"
+          "hash": "8759026480634817479"
         },
         {
           "file": "bigProject/apps/client/src/test/calculator.test1.ts",
@@ -76,19 +80,19 @@
         },
         {
           "file": "bigProject/apps/client/src/vite-env.d.ts",
-          "hash": "12946363841406869089"
+          "hash": "7856441258253745083"
         },
         {
           "file": "bigProject/apps/client/tsconfig.app.json",
-          "hash": "17534131638295275382"
+          "hash": "11330580769813525959"
         },
         {
           "file": "bigProject/apps/client/tsconfig.json",
-          "hash": "17878812346210416025"
+          "hash": "15482260374021495251"
         },
         {
           "file": "bigProject/apps/client/vite.config.ts",
-          "hash": "4395636868210924969"
+          "hash": "7634545002895057095"
         }
       ],
       "backend": [
@@ -102,11 +106,11 @@
         },
         {
           "file": "bigProject/apps/backend/package.json",
-          "hash": "12603738839441123558"
+          "hash": "8648365630271250596"
         },
         {
           "file": "bigProject/apps/backend/project.json",
-          "hash": "5585296183452770189"
+          "hash": "4515233014376044555"
         },
         {
           "file": "bigProject/apps/backend/src/index.test.ts",
@@ -118,7 +122,7 @@
         },
         {
           "file": "bigProject/apps/backend/tsconfig.json",
-          "hash": "10039227226531195531"
+          "hash": "13214416931085605819"
         }
       ]
     },
@@ -133,19 +137,19 @@
       },
       {
         "file": "bigProject/.gitignore",
-        "hash": "6746974787570063356"
+        "hash": "10209219849799967973"
       },
       {
         "file": "bigProject/.prettierignore",
-        "hash": "14688272390704683536"
+        "hash": "17085498363870782104"
       },
       {
         "file": "bigProject/.prettierrc",
-        "hash": "16267754514737964994"
+        "hash": "6820402234827505055"
       },
       {
         "file": "bigProject/README.md",
-        "hash": "1926600178270285116"
+        "hash": "15943537449456159031"
       },
       {
         "file": "bigProject/libs/Utils.ts",
@@ -153,11 +157,11 @@
       },
       {
         "file": "bigProject/nx.json",
-        "hash": "12511318577909301218"
+        "hash": "12899549321030301135"
       },
       {
         "file": "bigProject/package.json",
-        "hash": "1682326893376265754"
+        "hash": "8486590166036078045"
       },
       {
         "file": "bigProject/packages/.gitkeep",
@@ -165,27 +169,7 @@
       },
       {
         "file": "bigProject/tsconfig.base.json",
-        "hash": "2003109677624875242"
-      },
-      {
-        "file": "nxProject/.gitignore",
-        "hash": "18435103667633526488"
-      },
-      {
-        "file": "nxProject/README.md",
-        "hash": "2531785413940253030"
-      },
-      {
-        "file": "nxProject/nx.json",
-        "hash": "7984885312398650396"
-      },
-      {
-        "file": "nxProject/package.json",
-        "hash": "10101660289694609553"
-      },
-      {
-        "file": "nxProject/packages/.gitkeep",
-        "hash": "3244421341483603138"
+        "hash": "17681604892066927840"
       },
       {
         "file": "package.json",
