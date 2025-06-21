@@ -38,7 +38,8 @@ for test_file in "${TEST_FILES[@]}"; do
 #!/bin/bash
 echo "▶️ Running test: $test_file"
 cd /c/Gil/Playground/Playground/bigProject/apps/client || exit 1
-nx build backend || exit 1
+echo "⏳ Building backend..."
+time nx build backend
 npx ts-node "$test_file"
 EOF
 
