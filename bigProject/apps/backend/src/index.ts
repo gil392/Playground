@@ -29,6 +29,7 @@ app.get('/divide', ((req: Request, res: Response) => {
     return res.status(400).send('Invalid numbers');
   }
 
+  //
   // if (b === 0) {
   //   //
   //   return res.status(400).send('Division by zero');
