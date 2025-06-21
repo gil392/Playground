@@ -36,10 +36,10 @@ for test_file in "${TEST_FILES[@]}"; do
   cat <<EOF > "$RUNNER_SCRIPT"
   
 #!/bin/bash
-echo "▶️ Running test: $test_file"
+echo "▶️ Running test: $test_file" >> "$DETAILED_FILE"
 cd /c/Gil/Playground/Playground/bigProject/apps/client || exit 1
-echo "⏳ Building backend..."
-time nx build backend
+echo "⏳ Building backend..." >> "$DETAILED_FILE"
+time nx build backend >> "$DETAILED_FILE" 2>&1
 npx ts-node "$test_file"
 EOF
 
