@@ -5,9 +5,14 @@
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "types": ["vite/client"],
-    "composite": true
+    "types": ["vite/client", "jest", "node"]
   },
-  "include": ["../../libs/**/*.ts", "src/**/*.ts", "src/**/*.tsx"],
+  "include": [
+    "../../libs/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts"
+  ],
   "extends": "../../tsconfig.base.json"
 }
