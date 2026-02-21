@@ -3,6 +3,7 @@ import { CLIENT_URL } from '../../../../../libs/Utils';
 import { createDriver } from '../helpers/driver';
 
 async function run() {
+  
   console.log('🚀 Starting Selenium test- Add ...');
 
   console.log('🧱 Building driver...');

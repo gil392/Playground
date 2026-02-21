@@ -3,7 +3,7 @@ import { createDriver } from "./helpers/driver";
 import { strict as assert } from "assert";
 
 describe("Addition", function () {
-  this.timeout(15000); // Set timeout for async Selenium
+  // this.timeout(15000); // Set timeout for async Selenium
 
   let driver: any;
 
