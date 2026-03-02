@@ -30,5 +30,5 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "for %f in (src\\test\\*.test.ts) do npx ts-node %f"
-  },
+  }
 }

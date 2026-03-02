@@ -20,9 +20,9 @@ fi
 echo -e "\n🧪 Found ${#TEST_FILES[@]} tests:"
 for test in "${TEST_FILES[@]}"; do echo "  • $test"; done
 
-DETAILED_FILE="./dist/bisect/selenium_bisect_detailed.txt"
-SUMMARY_FILE="./dist/bisect/selenium_bisect_summary.txt"
-mkdir -p ./dist/bisect
+DETAILED_FILE="/c/dist/bisect/selenium_bisect_detailed.txt"
+SUMMARY_FILE="/c/dist/bisect/selenium_bisect_summary.txt"
+mkdir -p /c/dist/bisect
 > "$DETAILED_FILE"
 > "$SUMMARY_FILE"
 

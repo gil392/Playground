@@ -9,7 +9,7 @@ describe("Addition", function () {
 
   beforeEach(async () => {
     driver = await createDriver();
-    await driver.get("http://localhost:5174");
+    await driver.get("http://localhost:5180");
   });
 
   afterEach(async () => {
