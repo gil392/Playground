@@ -38,7 +38,7 @@ function App() {
         <Typography variant="h4" align="center" gutterBottom>
           Calculator Result 3
         </Typography>
-        <Stack spacing={2}>
+        <Stack spacing={4}>
           <TextField
             label="Number A"
             type="number"
