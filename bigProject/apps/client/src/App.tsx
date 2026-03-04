@@ -25,7 +25,7 @@ function App() {
       const res = await axios.get(`${API_BASE}/${operation}`, {
         params: { a, b },
       });
-      setResult(`Result: 2`);
+      setResult(`Result: 3`);
     } catch (err: any) {
       console.warn("Error handling calculation:", err);
       setError(err.response?.data || "Unknown error");
@@ -36,7 +36,7 @@ function App() {
     <Container maxWidth="sm">
       <Paper elevation={3} sx={{ p: 4, mt: 6, borderRadius: 3 }}>
         <Typography variant="h4" align="center" gutterBottom>
-          Calculator App1234
+          Calculator Result 3
         </Typography>
         <Stack spacing={2}>
           <TextField
