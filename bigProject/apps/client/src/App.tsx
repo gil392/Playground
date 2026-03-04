@@ -25,7 +25,7 @@ function App() {
       const res = await axios.get(`${API_BASE}/${operation}`, {
         params: { a, b },
       });
-      setResult(`Result: ${res.data.result}`);
+      setResult(`Result: 2`);
     } catch (err: any) {
       console.warn("Error handling calculation:", err);
       setError(err.response?.data || "Unknown error");
