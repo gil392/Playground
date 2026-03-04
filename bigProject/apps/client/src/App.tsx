@@ -16,6 +16,7 @@ function App() {
   const [b, setB] = useState<string>("");
   const [result, setResult] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  // oh yeah
 
   const handleCalc = async (operation: "add" | "divide") => {
     setResult(null);
