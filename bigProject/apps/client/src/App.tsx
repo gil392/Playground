@@ -37,7 +37,7 @@ function App() {
     <Container maxWidth="sm">
       <Paper elevation={3} sx={{ p: 4, mt: 6, borderRadius: 3 }}>
         <Typography variant="h4" align="center" gutterBottom>
-          Calculator Merger I know I know
+          Calculator Merger
         </Typography>
         <Stack spacing={2}>
           <TextField
@@ -70,7 +70,7 @@ function App() {
             </Typography>
           )}
           {error && (
-            <Typography variant="h6" color="error" align="center">
+            <Typography variant="h7" color="error" align="center">
               {error}
             </Typography>
           )}
