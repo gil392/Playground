@@ -70,7 +70,7 @@ function App() {
             </Typography>
           )}
           {error && (
-            <Typography variant="h7" color="error" align="center">
+            <Typography variant="h6" color="error" align="center">
               {error}
             </Typography>
           )}
